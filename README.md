@@ -16,30 +16,30 @@ This repository is an examples for building a Kubernetes cluster using Terraform
 ### Deploy Kubernetes Cluster on AWS
 
 ```console
-# clone this repo
+#clone this repo
 $ git clone https://github.com/yamamoto-febc/k8s_on_aws_with_terraform.git
 $ cd k8s_on_aws_with_terraform
 
-# set API keys to environment variables
+#set API keys to environment variables
 $ export AWS_ACCESS_KEY_ID="<your-access-key>"
 $ export AWS_SECRET_ACCESS_KEY="<your-secret-key>" 
 
-# deploy
+#deploy
 $ terraform init && terraform apply
 
 ###########################################################################
-# When "terraform apply" is completed, 
-# kubeconfig file should be created in the current directory 
+#When "terraform apply" is completed, 
+#kubeconfig file should be created in the current directory 
 ###########################################################################
 
-# set KUBECONFIG environment variable for kubectl 
+#set KUBECONFIG environment variable for kubectl 
 $ export KUBECONFIG=${PWD}/kube_config_cluster.yml 
 
 ###########################################################################
-# Then, kubectl command can be used
+#Then, kubectl command can be used
 ###########################################################################
 
-# component statuses
+#component statuses
 $ kubectl get cs
 
 NAME                 STATUS    MESSAGE              ERROR
